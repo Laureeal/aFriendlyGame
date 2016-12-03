@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sentence : MonoBehaviour {
+public class Sentence {
+    public string id;
+    public string text{
+        get
+        {
+            //gather the right language and text from the xml
+            return "";
+        }
+      }
+    public int idchoice;
+    public List<Answer> answers;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    
 }
