@@ -1170,6 +1170,7 @@ GameObject:
   - component: {fileID: 415784237}
   - component: {fileID: 415784239}
   - component: {fileID: 415784238}
+  - component: {fileID: 415784240}
   m_Layer: 5
   m_Name: Triangle Icon
   m_TagString: Untagged
@@ -1228,6 +1229,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 415784236}
+--- !u!114 &415784240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415784236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ed4457957005d4caee7e61053b0ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterId: P1
+  height: 0.1
+  duration: 0.2
 --- !u!1 &423972950
 GameObject:
   m_ObjectHideFlags: 0

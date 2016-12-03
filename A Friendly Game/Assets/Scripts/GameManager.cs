@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public int socialSupport = 0;
     public int teamMood = 0;
 
-	void Start ()
+	void Awake ()
     {
         if (singleton)
         {
