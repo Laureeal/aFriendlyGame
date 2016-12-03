@@ -18,7 +18,7 @@ public class Character
     {
         get
         {
-            Sentence s;
+            Sentence s = null;
             GameManager.singleton.sentences.TryGetValue(nextSentenceId, out s);
             return s;
         }
@@ -32,18 +32,18 @@ public class Character
         if (!isInteractable)
             return;
         GameManager.singleton.currentCharacter = this;
-        string dialogueKey = id + nextSentenceId;
         Sentence s = nextSentence;
+        string dialogueKey = id + s.Id;
         switch (s.idChoice)
         {
             case 0:
-                GameManager.singleton.StartDialogue(id + nextSentenceId, "ok", () => s.answers[0].Choose(this));
+                GameManager.singleton.StartDialogue(dialogueKey, "ok", () => s.answers[0].Choose(this));
                 break;
             case 1:
-                GameManager.singleton.StartDialogue(id + nextSentenceId, "yes", "no", () => s.answers[0].Choose(this), ()=>s.answers[1].Choose(this));
+                GameManager.singleton.StartDialogue(dialogueKey, "yes", "no", () => s.answers[0].Choose(this), ()=>s.answers[1].Choose(this));
                 break;
             case 2:
-                GameManager.singleton.StartDialogue(id + nextSentenceId, "yes", "maybe", () => s.answers[0].Choose(this), ()=>s.answers[1].Choose(this));
+                GameManager.singleton.StartDialogue(dialogueKey, "yes", "maybe", () => s.answers[0].Choose(this), ()=>s.answers[1].Choose(this));
                 break;
             default:
                 break;

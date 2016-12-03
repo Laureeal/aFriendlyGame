@@ -87,11 +87,13 @@ public class Answer
         const string JSONsetInteractable = "available";
         const string JSONnextSentence = "idsentence";
         const string JSONcontinueRightNow = "rightnow";
+        const string JSONsetBis = "bis";
 
         public string characterId;
         public bool setInteractable;
         public string nextSentence;
         public bool continueRightNow;
+        public bool setBis;
 
         public void Apply()
         {
@@ -99,6 +101,9 @@ public class Answer
             GameManager.singleton.characters.TryGetValue(characterId, out c);
             c.isInteractable = setInteractable;
             c.nextSentenceId = nextSentence;
+            Sentence s = c.nextSentence;
+            if (s != null)
+                s.bis = setBis;
             
             if (continueRightNow)
                 c.LaunchDialogue();
@@ -111,6 +116,7 @@ public class Answer
             setInteractable = obj.GetField(JSONsetInteractable).b;
             nextSentence = obj.GetField(JSONnextSentence).str;
             continueRightNow = obj.GetField(JSONcontinueRightNow).b;
+            setBis = obj.GetField(JSONsetBis).b;
         }
     }
 }
