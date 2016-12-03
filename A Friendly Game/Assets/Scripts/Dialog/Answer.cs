@@ -42,19 +42,28 @@ public class Answer
     }
     public void Choose(Character teller)
     {
-        ApplyStats();
-        //todo:add player
-        //todo:remove player
-        GameManager.singleton.StartDialogue(teller.id+ id,"ok",
-            () =>
+        Action a = () =>
+        {
+
+            ApplyStats();
+            //todo:add player
+            //todo:remove player
+
+            GameManager.singleton.EndDialogue();
+            for (int i = 0; i < results.Count; i++)
             {
-                GameManager.singleton.EndDialogue();
-                for (int i = 0; i < results.Count; i++)
-                {
-                    results[i].Apply();
-                }
+                results[i].Apply();
             }
-        );
+        };
+        if (hasResponse)
+        {
+            GameManager.singleton.StartDialogue(teller.id + id, "ok",
+                a
+            );
+        }
+        else {
+            a();
+        }
 
     }
 
