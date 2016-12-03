@@ -1,0 +1,694 @@
+{
+  "characters":[{
+    "idperson": "P1",
+    "available": true,
+    "complete": false,
+    "appreciation":1,
+    "nextquestion":"D1"
+  },
+  {
+    "idperson": "P2",
+    "available": true,
+    "complete": false,
+    "appreciation":1,
+    "nextquestion":"D4"
+  },
+  {
+    "idperson": "P3",
+    "available": true,
+    "complete": false,
+    "appreciation":1,
+    "nextquestion":"D10"
+  },
+  {
+    "idperson": "P4",
+    "available": true,
+    "complete": false,
+    "appreciation":1,
+    "nextquestion":"D15"
+  },
+  {
+    "idperson": "P5",
+    "available": false,
+    "complete": false,
+    "appreciation":1,
+    "nextquestion":"D5"
+  },
+  {
+    "idperson": "P6",
+    "available": false,
+    "complete": false,
+    "appreciation":1,
+    "nextquestion":"D11"
+  },
+  {
+    "idperson": "P7",
+    "available": false,
+    "complete": false,
+    "appreciation":1,
+    "nextquestion":"D12"
+  },
+  {
+    "idperson": "Pl0",
+    "available": false,
+    "complete": false,
+    "appreciation":1,
+    "nextquestion":"D7"
+  }
+],
+  "sentences":[
+    {
+      "idsentence":"D1",
+      "idchoice":1,
+      "answers": [
+        {
+          "idsentence":"D1a",
+          "result":[
+              {
+                  idperson: "P1",
+                  available: true,
+                  idsentence: "D2",
+                  rightnow: false
+              }
+          ],
+          "money":-1,
+          "teamatmosphere":0,
+          "socialappreciation":-1,
+          "appreciation": 1,
+          "playeradd":[],
+          "playerlose":[]
+        },
+        {
+          "idsentence":"D1b",
+          "result":[
+              {
+                  idperson: "P1",
+                  available: true,
+                  idsentence: "D1",
+                  rightnow: false
+              }
+          ],
+          "money":0,
+          "teamatmosphere":0,
+          "socialappreciation":-1,
+          "appreciation": -1,
+          "playeradd":[],
+          "playerlose":[],
+          "characteradd":[]
+        },
+      ]
+    },
+    {
+      "idsentence":"D2",
+      "idchoice":2,
+      "answers":[
+        {
+          "idsentence":"D2a",
+          "result":[
+              {
+                  idperson: "P1",
+                  available: true,
+                  idsentence: "D2",
+                  rightnow: false
+              }
+          ],
+          "money":0,
+          "teamatmosphere":0,
+          "socialappreciation":-1,
+          "appreciation": -1,
+          "playeradd":["1"],
+          "playerlose":[],
+          "characteradd":[
+              {
+                  "idperson":"Pl0", 
+                  "idsentence":"D7"
+              },
+          ]
+        },
+        {
+          "id":"D2b",
+          "result":[
+              {
+                  idperson: "P1",
+                  available: true,
+                  idsentence: "D2bis",
+                  rightnow: false
+              }
+          ],
+          "money":0,
+          "teamatmosphere":0,
+          "socialappreciation":-1,
+          "appreciation": -1,
+          "playeradd":["Pl1"],
+          "playerlose":[],
+          "characteradd":[
+              {
+                  "idperson":"Pl0", 
+                  "idsentence":"D7"
+              },
+          ]
+        }
+      ]
+    },
+    {
+      "id":"D3",
+      "idchoice":0,
+      "answers":[
+        {
+          "id":"0",
+          "result":[
+              {
+                  idperson: "P1",
+                  available: true,
+                  idsentence: "D3",
+                  rightnow: false
+              }
+          ],
+          "money":0,
+          "teamatmosphere":0,
+          "socialappreciation":0,
+          "appreciation": 0,
+          "playeradd":[],
+          "playerlose":[],
+          "characteradd":[]
+        }
+      ]
+    },
+    {
+      "id":"D4",
+      "idchoice":2,
+      "answers":[
+        {
+          "id":"D4a",
+          "result":[
+              {
+                  idperson: "P2",
+                  available: false,
+                  idsentence: "",
+                  rightnow: false
+              },
+              {
+                  idperson: "P5",
+                  available: true,
+                  idsentence: "D5",
+                  rightnow: false
+              }
+          ],
+          "money":0,
+          "teamatmosphere":0,
+          "socialappreciation":0,
+          "appreciation": 0,
+          "playeradd":["pl2"],
+          "playerlose":[],
+          "characteradd":[]
+        },
+        {
+          "id":"D4b",
+          "result":[
+              {
+                  idperson: "P2",
+                  available: true,
+                  idsentence: "D4bis",
+                  rightnow: false
+              },
+              {
+                  idperson: "P5",
+                  available: true,
+                  idsentence: "D5",
+                  rightnow: false
+              }
+          ],
+          "money": 0,
+          "teamatmosphere": 0,
+          "socialappreciation": 0,
+          "appreciation": 0,
+          "playeradd":[],
+          "playerlose":[],
+          "characteradd":["Pl0"]
+        }
+    ]
+    },
+    {
+        "idsentence":"D5",
+        "idchoice":2,
+        "answers": [
+            {
+            "idsentence":"D5a",
+            "result":[
+              {
+                  idperson: "P5",
+                  available: true,
+                  idsentence: "D6",
+                  rightnow: false
+              }
+            ],
+            "money":-1,
+            "teamatmosphere":0,
+            "socialappreciation":1,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            },
+            {
+            "idsentence":"D5b",
+            "result":[
+              {
+                  idperson: "P5",
+                  available: true,
+                  idsentence: "D5bis",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    },
+    {
+        "idsentence":"D6",
+        "idchoice":1,
+        "answers": [
+            {
+            "idsentence":"D6a",
+            "result":[
+              {
+                  idperson: "P5",
+                  available: false,
+                  idsentence: "",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":["pl3", "pl4"],
+            "playerlose":[],
+            "characteradd":[]
+            },
+            {
+            "idsentence":"D6b",
+            "result":[
+              {
+                  idperson: "P5",
+                  available: false,
+                  idsentence: "",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    },
+    {
+        "idsentence":"D7",
+        "idchoice":2,
+        "answers": [
+            {
+            "idsentence":"D7a",
+            "result":[
+                {
+                    idperson: "Pl0",
+                    available: false,
+                    idsentence: "",
+                    rightnow: false
+                },
+                {
+                    idperson: "P1",
+                    available: true,
+                    idsentence: "D9",
+                    rightnow: false
+                }
+            ],
+            "money":0,
+            "teamatmosphere":1,
+            "socialappreciation":1,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":["Pl0"],
+            "characteradd":[]
+            },
+            {
+            "idsentence":"D7b",
+            "result":[
+              {
+                  idperson: "P5",
+                  available: false,
+                  idsentence: "D8",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":-1,
+            "socialappreciation":-1,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    },
+    {
+        "idsentence":"D8",
+        "idchoice":1,
+        "answers": [
+            {
+            "idsentence":"D8a",
+            "result":[
+                {
+                    idperson: "Pl0",
+                    available: false,
+                    idsentence: "",
+                    rightnow: false
+                },
+                {
+                    idperson: "P1",
+                    available: true,
+                    idsentence: "D9",
+                    rightnow: false
+                }
+            ],
+            "money":0,
+            "teamatmosphere":1,
+            "socialappreciation":1,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":["Pl0"],
+            "characteradd":[]
+            },
+            {
+            "idsentence":"D8b",
+            "result":[
+              {
+                  idperson: "Pl0",
+                  available: false,
+                  idsentence: "D9",
+                  rightnow: true
+              }
+            ],
+            "money":0,
+            "teamatmosphere":-1,
+            "socialappreciation":-1,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":["Pl0"],
+            "characteradd":[]
+            }
+        ]
+    },
+    {
+        "idsentence":"D9",
+        "idchoice":0,
+        "answers": [
+            {
+            "idsentence":"0",
+            "result":[
+              {
+                  idperson: "P1",
+                  available: true,
+                  idsentence: "D9",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+            ]
+    },
+    {
+        "idsentence":"D10",
+        "idchoice":0,
+        "answers": [
+            {
+            "idsentence":"0",
+            "result":[
+                {
+                    idperson: "P3",
+                    available: false,
+                    idsentence: "",
+                    rightnow: false
+                },
+                {
+                    idperson: "P6",
+                    available: true,
+                    idsentence: "D11",
+                    rightnow: false
+                }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    }, 
+    {
+        "idsentence":"D11",
+        "idchoice":0,
+        "answers": [
+            {
+            "idsentence":"0",
+            "result":[
+                {
+                    idperson: "P6",
+                    available: false,
+                    idsentence: "",
+                    rightnow: false
+                },
+                {
+                    idperson: "P7",
+                    available: true,
+                    idsentence: "D12",
+                    rightnow: false
+                }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    },
+    {
+        "idsentence":"D12",
+        "idchoice":1,
+        "answers": [
+            {
+            "idsentence":"D12a",
+            "result":[
+                {
+                    idperson: "P7",
+                    available: false,
+                    idsentence: "D13",
+                    rightnow: false
+                }
+            ],
+            "money":0,
+            "teamatmosphere":1,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":["Pl5", "Pl6"],
+            "playerlose":[],
+            "characteradd":[]
+            },
+            {
+            "idsentence":"D12b",
+            "result":[
+              {
+                  idperson: "P7",
+                  available: false,
+                  idsentence: "",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    }, 
+    {
+        "idsentence":"D13",
+        "idchoice":0,
+        "answers": [
+            {
+            "idsentence":"0",
+            "result":[
+                {
+                    idperson: "P7",
+                    available: false,
+                    idsentence: "D14",
+                    rightnow: false
+                }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    },
+    {
+        "idsentence":"D14",
+        "idchoice":0,
+        "answers": [
+            {
+            "idsentence":"0",
+            "result":[
+                {
+                    idperson: "P7",
+                    available: false,
+                    idsentence: "",
+                    rightnow: false
+                }
+            ],
+            "money":0,
+            "teamatmosphere":-1,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":["player", "player"],
+            "characteradd":[]
+            }
+        ]
+    },
+    {
+        "idsentence":"D15",
+        "idchoice":1,
+        "answers": [
+            {
+            "idsentence":"D15a",
+            "result":[
+              {
+                  idperson: "P4",
+                  available: true,
+                  idsentence: "D16",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation":1,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            },
+            {
+            "idsentence":"D15b",
+            "result":[
+              {
+                  idperson: "P4",
+                  available: false,
+                  idsentence: "",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":1,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    }, 
+    {
+        "idsentence":"D16",
+        "idchoice":1,
+        "answers": [
+            {
+            "idsentence":"D16a",
+            "result":[
+              {
+                  idperson: "P4",
+                  available: true,
+                  idsentence: "D21",
+                  rightnow: true
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":1,
+            "appreciation":1,
+            "playeradd":["Pl7"],
+            "playerlose":[],
+            "characteradd":[]
+            },
+            {
+            "idsentence":"D15b",
+            "result":[
+              {
+                  idperson: "P4",
+                  available: false,
+                  idsentence: "",
+                  rightnow: false
+              }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    },
+    {
+        "idsentence":"D21",
+        "idchoice":0,
+        "answers": [
+            {
+            "idsentence":"0",
+            "result":[
+                {
+                    idperson: "P4",
+                    available: false,
+                    idsentence: "",
+                    rightnow: false
+                }
+            ],
+            "money":0,
+            "teamatmosphere":0,
+            "socialappreciation":0,
+            "appreciation": 0,
+            "playeradd":[],
+            "playerlose":[],
+            "characteradd":[]
+            }
+        ]
+    }  
+  ]
+}
