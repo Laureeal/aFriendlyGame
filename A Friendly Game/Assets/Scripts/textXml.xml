@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dialogues>
+  <language>
+    <Name>English</Name>
+    <joceline>
+      <yes>yes</yes>
+      <no>no</no>
+      <maybe>maybe</maybe>
+    </joceline>
+    <p1>
+      <d1>test 1</d1>
+      <d1a>;)</d1a>
+      <d1b>:'(</d1b>
+      <d2>test 2</d2>
+      <d2a>youpi</d2a>
+      <d2b>pffff</d2b>
+      <d3>test 3</d3>
+      <d4>test 4</d4>
+      <d4a>snif</d4a>
+      <d4b>love you</d4b>
+    </p1>
+  </language>
+</dialogues>
