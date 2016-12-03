@@ -25,6 +25,22 @@ public class XmlReader : MonoBehaviour
         Reader();
 	}
 
+    public void ChangeLanguage(int language)
+    {
+        currentLanguage = language;
+        ChangeText(numberPlayerLabel, "numberPlayers");
+        ChangeText(teamLevelLabel, "teamLevel");
+        ChangeText(socialSupportLabel, "socialSupport");
+        ChangeText(teamAmbientLabel, "teamMood");
+    }
+
+    void ChangeText (Text text, string key)
+    {
+        string temp = "";
+        languages[currentLanguage].TryGetValue(key, out temp);
+        text.text = temp;
+    }
+
     void Reader()
     {
         XmlDocument xmlDoc = new XmlDocument();
