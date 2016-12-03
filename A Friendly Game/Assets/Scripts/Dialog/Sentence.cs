@@ -11,15 +11,9 @@ public class Sentence {
     const string JSONanswers = "answers";
 
     public string id;
-    public string text{
-        get
-        {
-            //todo:gather the right language and text from the xml
-            return "";
-        }
-      }
     public int idChoice;
     public List<Answer> answers;
+    
 
     public Sentence(JSONObject obj)
     {
