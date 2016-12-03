@@ -125,7 +125,7 @@
           "playerlose":[]
         },
         {
-          "id":"D2b",
+          "idsentence":"D2b",
           "result":[
               {
                   "idperson": "P1",
@@ -150,11 +150,11 @@
       ]
     },
     {
-      "id":"D3",
+      "idsentence":"D3",
       "idchoice":0,
       "answers":[
         {
-          "id":"0",
+          "idsentence":"0",
           "result":[
               {
                   "idperson": "P1",
@@ -173,11 +173,11 @@
       ]
     },
     {
-      "id":"D4",
+      "idsentence":"D4",
       "idchoice":2,
       "answers":[
         {
-          "id":"D4a",
+          "idsentence":"D4a",
           "result":[
               {
                   "idperson": "P2",
@@ -200,7 +200,7 @@
           "playerlose":[]
         },
         {
-          "id":"D4b",
+          "idsentence":"D4b",
           "result":[
               {
                   "idperson": "P2",
