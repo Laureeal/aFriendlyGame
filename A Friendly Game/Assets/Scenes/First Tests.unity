@@ -2389,7 +2389,6 @@ GameObject:
   - component: {fileID: 1145179746}
   - component: {fileID: 1145179749}
   - component: {fileID: 1145179748}
-  - component: {fileID: 1145179750}
   - component: {fileID: 1145179751}
   m_Layer: 5
   m_Name: Team parameters Panel
@@ -2453,17 +2452,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1145179745}
---- !u!114 &1145179750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1145179745}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b686d70fae30b994c9435c325e396c05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1145179751
 MonoBehaviour:
   m_ObjectHideFlags: 0
