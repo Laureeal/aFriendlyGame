@@ -25,38 +25,28 @@ public class Character
 
     int currentDialogueKey;
 
-    void LaunchDialogue()
+    public void LaunchDialogue()
     {
-        
+
         if (!isInteractable)
             return;
         GameManager.singleton.currentCharacter = this;
-        string dialogueKey = id+nextSentenceId;
+        string dialogueKey = id + nextSentenceId;
         Sentence s = nextSentence;
-        /*
-        if (s.answers.Count == 2)
+        switch (s.idChoice)
         {
-            GameManager.singleton.StartDialogue(id + nextSentenceId, , s.answers[0].id,);
+            case 0:
+                GameManager.singleton.StartDialogue(id + nextSentenceId, "ok", s.answers[0].Choose);
+                break;
+            case 1:
+                GameManager.singleton.StartDialogue(id + nextSentenceId, "yes", "no", s.answers[0].Choose, s.answers[1].Choose);
+                break;
+            case 2:
+                GameManager.singleton.StartDialogue(id + nextSentenceId, "yes", "maybe", s.answers[0].Choose, s.answers[1].Choose);
+                break;
+            default:
+                break;
         }
-        else
-        {
-            gameManager.StartDialogue(temp);
-        }*/
-    }
-
-    public void CheckForGoodAnswer(string answer)
-    {
-        /*
-        if (answer == goodAnswerKeys[currentDialogueKey])
-        {
-            currentDialogueKey++;
-            if (currentDialogueKey >= dialogueKeys.Count)
-            {
-                isInteractable = false;
-                gameManager.EndDialogue();
-            }
-            LaunchDialogue();
-        }*/
     }
 
     public Character(JSONObject obj)

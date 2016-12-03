@@ -84,6 +84,8 @@ public class GameManager : MonoBehaviour
         dialogueText.text = "";
         optionAButtonText.text = "";
         optionBButtonText.text = "";
+        optionAButton.onClick.RemoveAllListeners();
+        optionBButton.onClick.RemoveAllListeners();
     }
 
     void StartDialogue()
@@ -91,13 +93,14 @@ public class GameManager : MonoBehaviour
         dialogueBox.gameObject.SetActive(true);
     }
 
-    public void StartDialogue(string dialogueKey)
+    public void StartDialogue(string dialogueKey, string optionKey, Action action )
     {
         EmptyTexts();
         optionAButton.gameObject.SetActive(false);
         optionBButton.gameObject.SetActive(true);
         dialogueText.text = xmlReader.GetDialogue(dialogueKey);
-        optionBButtonText.text = "OK";
+        optionBButtonText.text = xmlReader.GetDialogue(optionKey);
+        optionBButton.onClick.AddListener(()=> {action();});
         StartDialogue();
     }
 
@@ -109,17 +112,14 @@ public class GameManager : MonoBehaviour
         dialogueText.text = xmlReader.GetDialogue(dialogueKey);
         optionAButtonText.text = xmlReader.GetDialogue(optionAKey);
         optionBButtonText.text = xmlReader.GetDialogue(optionBKey);
+        optionAButton.onClick.AddListener(() => { actionA(); });
+        optionBButton.onClick.AddListener(() => { actionB(); });
         StartDialogue();
     }
 
     public void EndDialogue()
     {
         dialogueBox.gameObject.SetActive(false);
-    }
-
-    public void OnButtonClick(string button)
-    {
-        currentCharacter.CheckForGoodAnswer(button);
     }
 
     public void OnParametersButtonClick()

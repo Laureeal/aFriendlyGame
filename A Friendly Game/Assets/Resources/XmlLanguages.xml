@@ -48,6 +48,7 @@
         <yes>Yes</yes>
         <no>No</no>
         <maybe>Maybe</maybe>
+        <ok>ok</ok>
       
         <numberPlayers>Number of players</numberPlayers>
         <teamLevel>Team's level</teamLevel>
