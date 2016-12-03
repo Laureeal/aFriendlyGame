@@ -20,21 +20,4 @@ public class Wrap : MonoBehaviour {
 
         }
     }
-	
-/*	void Update ()
-    {
-        
-        if (transform.position.x < leftBorder)
-        {
-            transform.position = new Vector3(transform.position.x +width, transform.position.y, transform.position.z) ;
-
-        }
-        if (transform.position.x > rightBorder)
-        {
-            transform.position = new Vector3(transform.position.x - width, transform.position.y, transform.position.z);
-
-        }
-
-        
-    }*/
 }
