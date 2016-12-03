@@ -21,7 +21,7 @@ public class Wrap : MonoBehaviour {
         }
     }
 	
-	void Update ()
+/*	void Update ()
     {
         
         if (transform.position.x < leftBorder)
@@ -36,5 +36,5 @@ public class Wrap : MonoBehaviour {
         }
 
         
-    }
+    }*/
 }
