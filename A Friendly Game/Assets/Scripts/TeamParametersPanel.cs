@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TeamParametersPanel : MonoBehaviour
 {
-    public GameManager gameManager;
+/*    public GameManager gameManager;
 
     public Text numberPlayerLabel;
     public Text numberPlayerText;
@@ -27,6 +27,6 @@ public class TeamParametersPanel : MonoBehaviour
         teamLevelText.text = gameManager.level.ToString();
         socialSupportText.text = gameManager.socialSupport.ToString();
         teamAmbientText.text = gameManager.teamAmbient.ToString();
-    }
+    }*/
 
 }

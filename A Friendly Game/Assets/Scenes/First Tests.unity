@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1076,7 +1076,6 @@ GameObject:
   m_Component:
   - component: {fileID: 606340394}
   - component: {fileID: 606340398}
-  - component: {fileID: 606340397}
   - component: {fileID: 606340396}
   - component: {fileID: 606340395}
   m_Layer: 5
@@ -1163,39 +1162,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 606340397}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 746159688}
+        m_MethodName: OnParametersButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &606340397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 606340393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!222 &606340398
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1519,6 +1502,10 @@ MonoBehaviour:
   dialogsDictionary: {fileID: 4900000, guid: 71b8d0ddf70b16740b95ffcd0f799305, type: 3}
   languageName: 
   currentLanguage: 0
+  numberPlayerLabel: {fileID: 0}
+  teamLevelLabel: {fileID: 0}
+  socialSupportLabel: {fileID: 0}
+  teamAmbientLabel: {fileID: 0}
 --- !u!114 &746159688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,9 +1518,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1947186077}
+  parametersPanel: {fileID: 1515267911}
   dialogueText: {fileID: 1881349109}
   optionAButton: {fileID: 889347827}
   optionBButton: {fileID: 1570448999}
+  numberPlayerText:
+  - {fileID: 1929098314}
+  - {fileID: 1684393335}
+  teamLevelText:
+  - {fileID: 1952093294}
+  - {fileID: 1204278886}
+  socialSupportText:
+  - {fileID: 757961545}
+  - {fileID: 2111342199}
+  teamMoodText:
+  - {fileID: 1940657010}
+  - {fileID: 328159831}
   currentCharacter: {fileID: 0}
   xmlReader: {fileID: 0}
   players:
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   - {fileID: 2016806733}
   level: 3
   socialSupport: 5
-  teamAmbient: -2
+  teamMood: 0
 --- !u!1 &757961542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,7 +1904,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Number of players
+  m_Text: Team Mood
 --- !u!222 &837922890
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2459,20 +2459,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1145179745}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b686d70fae30b994c9435c325e396c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 746159688}
-  numberPlayerLabel: {fileID: 1811229128}
-  numberPlayerText: {fileID: 1929098314}
-  teamLevelLabel: {fileID: 1985158355}
-  teamLevelText: {fileID: 1952093294}
-  socialSupportLabel: {fileID: 291667246}
-  socialSupportText: {fileID: 757961545}
-  teamAmbientLabel: {fileID: 837922889}
-  teamAmbientText: {fileID: 1940657010}
 --- !u!114 &1145179751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2688,7 +2679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3761,7 +3752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4651,7 +4642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
