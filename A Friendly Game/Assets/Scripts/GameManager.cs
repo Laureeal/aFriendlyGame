@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         EmptyTexts();
         optionAButton.gameObject.SetActive(false);
         optionBButton.gameObject.SetActive(true);
-        dialogueText.text = xmlReader.GetDialogue(currentCharacter.characterKey, dialogueKey);
+        dialogueText.text = xmlReader.GetDialogue(dialogueKey);
         optionBButtonText.text = "OK";
         StartDialogue();
     }
@@ -69,9 +69,9 @@ public class GameManager : MonoBehaviour
         EmptyTexts();
         optionAButton.gameObject.SetActive(true);
         optionBButton.gameObject.SetActive(true);
-        dialogueText.text = xmlReader.GetDialogue(currentCharacter.characterKey, dialogueKey);
-        optionAButtonText.text = xmlReader.GetDialogue(currentCharacter.characterKey, optionAKey);
-        optionBButtonText.text = xmlReader.GetDialogue(currentCharacter.characterKey, optionBKey);
+        dialogueText.text = xmlReader.GetDialogue(dialogueKey);
+        optionAButtonText.text = xmlReader.GetDialogue(optionAKey);
+        optionBButtonText.text = xmlReader.GetDialogue(optionBKey);
         StartDialogue();
     }
 

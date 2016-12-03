@@ -13,7 +13,7 @@ public class XmlReader : MonoBehaviour
     public string languageName;
     public int currentLanguage;
 
-    public List <Dictionary <string, Dictionary<string, string>>> languages = new List<Dictionary<string, Dictionary<string, string>>>();
+    public List <Dictionary<string, string>> languages = new List<Dictionary<string, string>>();
 
     public Text numberPlayerLabel;
     public Text teamLevelLabel;
@@ -35,26 +35,20 @@ public class XmlReader : MonoBehaviour
         {
             XmlNodeList languageContent = languageValue.ChildNodes;
 
-            Dictionary < string,Dictionary<string, string>> obj = new Dictionary<string, Dictionary<string, string>>();
+            Dictionary<string, string> obj = new Dictionary<string, string>();
 
-            foreach (XmlNode character in languageContent)
+            foreach (XmlNode value in languageContent)
             {
-                XmlNodeList dialogues = character.ChildNodes;
-                Dictionary<string, string> obj2 = new Dictionary<string, string>();
-                foreach (XmlNode value in dialogues)
-                {
-                    obj2.Add(value.Name, value.InnerText);
-                }
-                obj.Add(character.Name, obj2);
+                obj.Add(value.Name, value.InnerText);
             }
             languages.Add(obj);
         }
     }
 
-    public string GetDialogue(string characterKey, string key)
+    public string GetDialogue(string key)
     {
         string temp = "";
-        languages[currentLanguage][characterKey].TryGetValue(key, out temp);
+        languages[currentLanguage].TryGetValue(key, out temp);
         return temp;
     }
 }
