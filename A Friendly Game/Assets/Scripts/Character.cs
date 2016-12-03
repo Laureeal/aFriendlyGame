@@ -8,7 +8,7 @@ public class Character
     const string JSONid = "idperson";
     const string JSONisInteractable = "available";
     const string JSONappreciation = "appreciation";
-    const string JSONnextSentenceId = "nextQuestion";
+    const string JSONnextSentenceId = "nextquestion";
 
     public string id;
     public bool isInteractable = false;

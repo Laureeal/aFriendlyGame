@@ -72,9 +72,9 @@ public class GameManager : MonoBehaviour
 
         List<Character> c = obj.GetField("characters").list.ConvertAll(e => new Character(e));
         characters = new Dictionary<string, Character>();
-        for (int i = 0; i < s.Count; i++)
+        for (int i = 0; i < c.Count; i++)
         {
-            sentences.Add(s[i].id, s[i]);
+            characters.Add(c[i].id, c[i]);
         }
     }
 
