@@ -65,10 +65,10 @@
           "idsentence":"D1a",
           "result":[
               {
-                  idperson: "P1",
-                  available: true,
-                  idsentence: "D2",
-                  rightnow: false
+                  "idperson": "P1",
+                  "available": true,
+                  "idsentence": "D2",
+                  "rightnow": false
               }
           ],
           "money":-1,
@@ -82,10 +82,10 @@
           "idsentence":"D1b",
           "result":[
               {
-                  idperson: "P1",
-                  available: true,
-                  idsentence: "D1",
-                  rightnow: false
+                  "idperson": "P1",
+                  "available": true,
+                  "idsentence": "D1",
+                  "rightnow": false
               }
           ],
           "money":0,
@@ -203,10 +203,10 @@
           "id":"D4b",
           "result":[
               {
-                  "idperson: "P2",
-                  "available: true,
-                  "idsentence: "D4bis",
-                  "rightnow: false
+                  "idperson": "P2",
+                  "available": true,
+                  "idsentence": "D4bis",
+                  "rightnow": false
               },
               {
                   "idperson": "P5",
