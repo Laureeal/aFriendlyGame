@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using System.Xml;
 using System.Text;
@@ -13,6 +14,11 @@ public class XmlReader : MonoBehaviour
     public int currentLanguage;
 
     public List <Dictionary <string, Dictionary<string, string>>> languages = new List<Dictionary<string, Dictionary<string, string>>>();
+
+    public Text numberPlayerLabel;
+    public Text teamLevelLabel;
+    public Text socialSupportLabel;
+    public Text teamAmbientLabel;
 
     void Awake ()
     {

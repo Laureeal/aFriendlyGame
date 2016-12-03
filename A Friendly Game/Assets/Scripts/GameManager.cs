@@ -7,10 +7,16 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public RectTransform dialogueBox;
+    public RectTransform parametersPanel;
 
     public Text dialogueText;
     public Button optionAButton;
     public Button optionBButton;
+
+    public Text[] numberPlayerText;
+    public Text[] teamLevelText;
+    public Text[] socialSupportText;
+    public Text[] teamMoodText;
 
     [HideInInspector]
     public Character currentCharacter;
@@ -25,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public int level = 1;
     public int socialSupport = 0;
-    public int teamAmbient = 0;
+    public int teamMood = 0;
 
 	void Start ()
     {
@@ -33,6 +39,7 @@ public class GameManager : MonoBehaviour
         xmlReader = GetComponent<XmlReader>();
         optionAButtonText = optionAButton.GetComponentInChildren<Text>();
         optionBButtonText = optionBButton.GetComponentInChildren<Text>();
+        ActualizeTexts();
     }
 
     void EmptyTexts()
@@ -77,4 +84,30 @@ public class GameManager : MonoBehaviour
     {
         currentCharacter.CheckForGoodAnswer(button);
     }
+
+    public void OnParametersButtonClick()
+    {
+        parametersPanel.gameObject.SetActive(!parametersPanel.gameObject.activeInHierarchy);
+    }
+
+    public void ActualizeTexts()
+    {
+        foreach(Text text in numberPlayerText)
+        {
+            text.text = players.Count.ToString();
+        }
+        foreach(Text text in teamLevelText)
+        {
+            text.text = level.ToString();
+        }
+        foreach (Text text in socialSupportText)
+        {
+            text.text = socialSupport.ToString();
+        }
+        foreach (Text text in teamMoodText)
+        {
+            text.text = teamMood.ToString();
+        }
+    }
+
 }
