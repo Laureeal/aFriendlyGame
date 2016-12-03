@@ -11,7 +11,7 @@ public class XmlReader : MonoBehaviour
     public TextAsset dialogsDictionary;
 
     public string languageName;
-    public int currentLanguage;
+    public int currentLanguage = 0;
 
     public List <Dictionary<string, string>> languages = new List<Dictionary<string, string>>();
 

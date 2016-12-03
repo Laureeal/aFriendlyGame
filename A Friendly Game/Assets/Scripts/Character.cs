@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character
 {
     public GameManager gameManager;
 
@@ -15,14 +15,6 @@ public class Character : MonoBehaviour
     public List<string> goodAnswerKeys;
 
     int currentDialogueKey;
-	
-	void Update ()
-    {
-        if (Input.GetButton("Jump"))
-        {
-            LaunchDialogue();
-        }
-    }
 
     void LaunchDialogue()
     {

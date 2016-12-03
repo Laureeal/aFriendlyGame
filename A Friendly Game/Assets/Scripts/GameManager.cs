@@ -6,8 +6,11 @@ using UnityEngine.UI;
 [RequireComponent(typeof(XmlReader))]
 public class GameManager : MonoBehaviour
 {
+    public static GameManager singleton;
+
     public RectTransform dialogueBox;
     public RectTransform parametersPanel;
+
 
     public Text dialogueText;
     public Button optionAButton;
@@ -35,6 +38,14 @@ public class GameManager : MonoBehaviour
 
 	void Start ()
     {
+        if (singleton)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            singleton = this;
+        }
         dialogueBox.gameObject.SetActive(false);
         xmlReader = GetComponent<XmlReader>();
         optionAButtonText = optionAButton.GetComponentInChildren<Text>();
@@ -110,4 +121,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void OnCharacterClick(string id)
+    {
+        Debug.Log(id + " has been clicked");
+    }
 }
