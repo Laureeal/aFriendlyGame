@@ -37,13 +37,13 @@ public class Character
         switch (s.idChoice)
         {
             case 0:
-                GameManager.singleton.StartDialogue(id + nextSentenceId, "ok", s.answers[0].Choose);
+                GameManager.singleton.StartDialogue(id + nextSentenceId, "ok", () => s.answers[0].Choose(this));
                 break;
             case 1:
-                GameManager.singleton.StartDialogue(id + nextSentenceId, "yes", "no", s.answers[0].Choose, s.answers[1].Choose);
+                GameManager.singleton.StartDialogue(id + nextSentenceId, "yes", "no", () => s.answers[0].Choose(this), ()=>s.answers[1].Choose(this));
                 break;
             case 2:
-                GameManager.singleton.StartDialogue(id + nextSentenceId, "yes", "maybe", s.answers[0].Choose, s.answers[1].Choose);
+                GameManager.singleton.StartDialogue(id + nextSentenceId, "yes", "maybe", () => s.answers[0].Choose(this), ()=>s.answers[1].Choose(this));
                 break;
             default:
                 break;

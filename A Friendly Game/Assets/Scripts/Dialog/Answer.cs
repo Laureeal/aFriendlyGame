@@ -40,17 +40,21 @@ public class Answer
         GameManager.singleton.teamMood += teamAtmosphere;
         GameManager.singleton.currentCharacter.appreciation += appreciation;
     }
-    public void Choose()
+    public void Choose(Character teller)
     {
         ApplyStats();
         //todo:add player
         //todo:remove player
-
-        GameManager.singleton.EndDialogue();
-        for (int i = 0; i < results.Count; i++)
-        {
-            results[i].Apply();
-        }
+        GameManager.singleton.StartDialogue(teller.id+ id,"ok",
+            () =>
+            {
+                GameManager.singleton.EndDialogue();
+                for (int i = 0; i < results.Count; i++)
+                {
+                    results[i].Apply();
+                }
+            }
+        );
 
     }
 
@@ -86,6 +90,7 @@ public class Answer
             GameManager.singleton.characters.TryGetValue(characterId, out c);
             c.isInteractable = setInteractable;
             c.nextSentenceId = nextSentence;
+            
             if (continueRightNow)
                 c.LaunchDialogue();
 
@@ -96,7 +101,7 @@ public class Answer
             characterId = obj.GetField(JSONcharacterId).str;
             setInteractable = obj.GetField(JSONsetInteractable).b;
             nextSentence = obj.GetField(JSONnextSentence).str;
-            continueRightNow = obj.GetField(JSONsetInteractable).b;
+            continueRightNow = obj.GetField(JSONcontinueRightNow).b;
         }
     }
 }
