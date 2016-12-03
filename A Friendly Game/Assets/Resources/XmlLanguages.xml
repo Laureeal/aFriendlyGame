@@ -43,9 +43,11 @@
 		    <P4D16a>Ok. Thank you.</P4D16a>
 		    <P4D16b>Great! We are really looking forward to follow-up the project.</P4D16b>
 		    <P4D21>Good news. One of the women of the association would like to try to play football in your team! She will be there at the next training.</P4D21>
-		    
-		    
-		
+
+        <numberPlayers>Number of players</numberPlayers>
+        <teamLevel>Team's level</teamLevel>
+        <socialSupport>Social support</socialSupport>
+        <teamMood>Team's mood</teamMood>
 		
     </language>
 </dialogues>
