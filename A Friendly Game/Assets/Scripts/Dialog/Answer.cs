@@ -17,11 +17,9 @@ public class Answer {
 
     public string id;
     public string text
-    {
-        get
+    public bool hasResponse { get
         {
-            //todo:gather the right language and text from the xml
-            return "";
+            return id != "0";
         }
     }
     public int money;
@@ -74,8 +72,11 @@ public class Answer {
         public bool continueRightNow;
 
         public void Apply() {
-            //todo:take character
-            //todo:set stuff
+            Character c;
+            GameManager.singleton.characters.TryGetValue(characterId, out c);
+            c.isInteractable = setInteractable;
+            c.nextSentenceId = nextSentence;
+            //todo:hande continue right now
 
         }
 

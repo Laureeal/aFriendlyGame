@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,11 @@ public class GameManager : MonoBehaviour
     public RectTransform dialogueBox;
     public RectTransform parametersPanel;
 
+    [HideInInspector]
+    public Dictionary<string, Sentence> sentences;
+
+    [HideInInspector]
+    public Dictionary<string, Character> characters;
 
     public Text dialogueText;
     public Button optionAButton;
@@ -21,7 +27,6 @@ public class GameManager : MonoBehaviour
     public Text[] socialSupportText;
     public Text[] teamMoodText;
 
-    [HideInInspector]
     public Character currentCharacter;
 
     Text optionAButtonText;
@@ -31,6 +36,8 @@ public class GameManager : MonoBehaviour
     public XmlReader xmlReader;
 
     public List<Player> players;
+
+    public string jsonName;
 
     public int level = 1;
     public int socialSupport = 0;
@@ -46,12 +53,31 @@ public class GameManager : MonoBehaviour
         {
             singleton = this;
         }
+        LoadJSON();
         dialogueBox.gameObject.SetActive(false);
         xmlReader = GetComponent<XmlReader>();
         optionAButtonText = optionAButton.GetComponentInChildren<Text>();
         optionBButtonText = optionBButton.GetComponentInChildren<Text>();
         ActualizeTexts();
     }
+    private void LoadJSON()
+    {
+        JSONObject obj = new JSONObject(Resources.Load<TextAsset>(jsonName).text);
+        List<Sentence> s = obj.GetField("sentences").list.ConvertAll(e => new Sentence(e));
+        sentences = new Dictionary<string, Sentence>();
+        for (int i = 0; i < s.Count; i++)
+        {
+            sentences.Add(s[i].id, s[i]);
+        }
+
+        List<Character> c = obj.GetField("characters").list.ConvertAll(e => new Character(e));
+        characters = new Dictionary<string, Character>();
+        for (int i = 0; i < s.Count; i++)
+        {
+            sentences.Add(s[i].id, s[i]);
+        }
+    }
+
 
     void EmptyTexts()
     {
@@ -75,7 +101,7 @@ public class GameManager : MonoBehaviour
         StartDialogue();
     }
 
-    public void StartDialogue(string dialogueKey, string optionAKey, string optionBKey)
+    public void StartDialogue(string dialogueKey, string optionAKey, string optionBKey, Action actionA, Action actionB)
     {
         EmptyTexts();
         optionAButton.gameObject.SetActive(true);
