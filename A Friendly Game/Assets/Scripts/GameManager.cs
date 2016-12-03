@@ -149,6 +149,8 @@ public class GameManager : MonoBehaviour
 
     public void OnCharacterClick(string id)
     {
-        Debug.Log(id + " has been clicked");
+        Character c;
+        characters.TryGetValue(id, out c);
+        c.LaunchDialogue();
     }
 }

@@ -18,8 +18,9 @@ public class Character
     {
         get
         {
-            // todo: get the sentence
-            return null;
+            Sentence s;
+            GameManager.singleton.sentences.TryGetValue(nextSentenceId, out s);
+            return s;
         }
     }
 
