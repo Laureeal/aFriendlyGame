@@ -50,6 +50,15 @@ public class Answer
             //GameManager.singleton.AddPlayer()
             //todo:add player
             //todo:remove player
+            foreach(string playerId in addPlayerIds)
+            {
+                GameManager.singleton.AddPlayer(playerId);
+            }
+
+            foreach(string playerId in losePlayerIds)
+            {
+                GameManager.singleton.RemovePlayer(playerId);
+            }
 
             GameManager.singleton.EndDialogue();
             for (int i = 0; i < results.Count; i++)
