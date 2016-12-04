@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e50af87441e574b449e64b8034a1b419
+timeCreated: 1480817633
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Annie Use Your Telescope
+  fontNames:
+  - Annie Use Your Telescope
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
