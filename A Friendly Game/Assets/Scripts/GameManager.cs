@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
 
     public void AddPlayer (string playerId)
     {
+        Debug.Log("adding player");
         GameObject go = Instantiate(playersListPanel.playerButtonPrefab, playersListPanel.transform) as GameObject;
         Player newPlayer = new Player(nameOfPlayers[playerId]);
         players.Add(playerId, newPlayer);
