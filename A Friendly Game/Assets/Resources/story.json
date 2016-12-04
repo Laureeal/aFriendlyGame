@@ -738,7 +738,7 @@
           "result": [
             {
               "idperson": "P8",
-              "available": true,
+              "available": false,
               "idsentence": "",
               "rightnow": false,
               "bis": false
@@ -755,9 +755,9 @@
           "idsentence": "D19b",
           "result": [
             {
-              "idperson": "P1",
+              "idperson": "P8",
               "available": true,
-              "idsentence": "D1",
+              "idsentence": "D19",
               "rightnow": false,
               "bis": true
             }
