@@ -128,7 +128,7 @@
           "teamatmosphere": 0,
           "socialappreciation": -1,
           "appreciation": -1,
-          "playeradd": [ "1" ],
+          "playeradd": [ "Pl1" ],
           "playerlose": [ ]
         },
         {
@@ -210,7 +210,7 @@
           "teamatmosphere": 0,
           "socialappreciation": 0,
           "appreciation": 0,
-          "playeradd": [ "pl2" ],
+          "playeradd": [ "Pl2" ],
           "playerlose": [ ]
         },
         {
@@ -304,7 +304,7 @@
           "teamatmosphere": 0,
           "socialappreciation": 0,
           "appreciation": 0,
-          "playeradd": [ "pl3", "pl4" ],
+          "playeradd": [ "Pl3", "Pl4" ],
           "playerlose": [ ]
         },
         {

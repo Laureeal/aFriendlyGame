@@ -39,6 +39,7 @@ public class Answer
         GameManager.singleton.socialSupport += socialAppreciation;
         GameManager.singleton.teamMood += teamAtmosphere;
         GameManager.singleton.currentCharacter.appreciation += appreciation;
+        GameManager.singleton.ActualizeTexts();
     }
     public void Choose(Character teller)
     {
