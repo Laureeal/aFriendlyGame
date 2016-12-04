@@ -56,6 +56,13 @@
       "appreciation": 1,
       "nextquestion": "D7"
     }
+    {
+      "idperson": "P8",
+      "available": true,
+      "complete": false,
+      "appreciation": 1,
+      "nextquestion": "D19"
+    }
   ],
   "sentences": [
     {
@@ -718,6 +725,50 @@
           "playeradd": [ ],
           "playerlose": [ ]
         }
+        
+      ]
+    }
+    {
+      "idsentence": "D19",
+      "idchoice": 2,
+      "bis": false,
+      "answers": [
+        {
+          "idsentence": "D19a",
+          "result": [
+            {
+              "idperson": "P8",
+              "available": true,
+              "idsentence": "",
+              "rightnow": false,
+              "bis": false
+            }
+          ],
+          "money": -1,
+          "teamatmosphere": +,
+          "socialappreciation": +1,
+          "appreciation": 0,
+          "playeradd": [ ],
+          "playerlose": [ ]
+        },
+        {
+          "idsentence": "D19b",
+          "result": [
+            {
+              "idperson": "P1",
+              "available": true,
+              "idsentence": "D1",
+              "rightnow": false,
+              "bis": true
+            }
+          ],
+          "money": 0,
+          "teamatmosphere": 0,
+          "socialappreciation": 0,
+          "appreciation": 0,
+          "playeradd": [ ],
+          "playerlose": [ ]
+        },
       ]
     }
   ]
