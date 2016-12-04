@@ -47,6 +47,7 @@ public class Answer
         {
 
             ApplyStats();
+            //GameManager.singleton.AddPlayer()
             //todo:add player
             //todo:remove player
 

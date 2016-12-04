@@ -53,6 +53,9 @@ public class GameManager : MonoBehaviour
     public RectTransform hourHandOfClock;
     public Image night;
     public float timeToFadeToNight = 1f;
+
+    public Dictionary<string, string> nameOfPlayers;
+
 	void Awake ()
     {
         if (singleton)
@@ -74,16 +77,37 @@ public class GameManager : MonoBehaviour
         socialSupport = 5;
         teamMood = 50;
 
+        SetPlayersNames();
+
         players = new Dictionary<string, Player>();
 
+        AddPlayer("joc");
+        AddPlayer("Pl0");
+
         ActualizeTexts();
+    }
+
+    void SetPlayersNames ()
+    {
+        nameOfPlayers = new Dictionary<string, string>();
+        nameOfPlayers.Add("joc", "Jocelyne");
+        nameOfPlayers.Add("Pl0", "Michelle");
+        nameOfPlayers.Add("Pl1", "Missy");
+        nameOfPlayers.Add("Pl2", "Soky");
+        nameOfPlayers.Add("Pl3", "B.B.");
+        nameOfPlayers.Add("Pl4", "Meta");
+        nameOfPlayers.Add("Pl5", "Chanel");
+        nameOfPlayers.Add("Pl6", "Desanges");
+        nameOfPlayers.Add("Pl7", "Marie");
     }
 
     public void AddPlayer (string playerId)
     {
         GameObject go = Instantiate(playersListPanel.playerButtonPrefab, playersListPanel.transform) as GameObject;
-        players.Add(playerId, go.GetComponent<Player>());
+        Player newPlayer = new Player(nameOfPlayers[playerId]);
+        players.Add(playerId, newPlayer);
         ActualizeTexts();
+        playersListPanel.ActualizePlayersList();
     }
 
     public void RemovePlayer (string playerId)
@@ -93,9 +117,10 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        Destroy(players[playerId].gameObject);
+        //Destroy(players[playerId].gameObject);
         players.Remove(playerId);
         ActualizeTexts();
+        playersListPanel.ActualizePlayersList();
     }
 
     private void LoadJSON()

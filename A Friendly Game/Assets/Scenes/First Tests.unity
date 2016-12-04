@@ -4330,9 +4330,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1947186077}
   parametersPanel: {fileID: 1515267911}
+  playersListPanel: {fileID: 477964481}
   dialogueText: {fileID: 1881349109}
   optionAButton: {fileID: 889347827}
   optionBButton: {fileID: 1570448999}
+  moneyText: {fileID: 799776839}
   numberPlayerText:
   - {fileID: 1929098314}
   - {fileID: 1684393335}
@@ -4346,21 +4348,16 @@ MonoBehaviour:
   - {fileID: 1940657010}
   - {fileID: 328159831}
   xmlReader: {fileID: 0}
-  players:
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
-  - {fileID: 1084571855}
   jsonName: story
+  money: 100
   level: 3
   socialSupport: 5
   teamMood: 0
+  today: 1
+  hour: 6
+  hourHandOfClock: {fileID: 1557093795}
+  night: {fileID: 0}
+  timeToFadeToNight: 1
 --- !u!1 &755880762
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,7 +5650,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 25, y: -30, z: 0}
 --- !u!1 &1063859286
 GameObject:
@@ -5858,54 +5855,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1066753554}
---- !u!1001 &1084571854
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4897296944482186, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897296944482186, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897296944482186, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897296944482186, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897296944482186, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897296944482186, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897296944482186, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897296944482186, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 3a723ae0bda5f0941996fcdf4ece839b, type: 2}
-  m_IsPrefabParent: 0
---- !u!114 &1084571855 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114250573553180716, guid: 3a723ae0bda5f0941996fcdf4ece839b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1084571854}
-  m_Script: {fileID: 11500000, guid: 652d61335c3d4ca49b9be3ff1dec4649, type: 3}
 --- !u!1 &1136089079
 GameObject:
   m_ObjectHideFlags: 0
@@ -7429,7 +7378,7 @@ RectTransform:
   - {fileID: 542232873}
   - {fileID: 930411576}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
