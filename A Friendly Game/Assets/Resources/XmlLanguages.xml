@@ -1,59 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dialogues>
-    <language>
-        <Name>English</Name>
-            <P1D1>Jambo, my friend! You have some $ugar for me? ;-) </P1D1>
-            <P1D1a>Thank you my friend! God bless you! </P1D1a>
-            <P1D1b>Ah.You can't even miss some francs? Such a shame! </P1D1b>
-            <P1D2>How are you? I heard you are looking for players? My sister, Missy, she often plays with us, her Schege brothers. Can she join your team?</P1D2>
-            <P1D2a>Great! She will be looking forward to the first training! </P1D2a>
-            <P1D2b>Ok. Keep me posted!</P1D2b>
-            <P1D2bis>Missy is still waiting for your answer. Can she join the team?</P1D2bis>
-            <P1D3>Hi my friend!</P1D3>
-            <P1D18>You need a ball to play? I have one for a good price. Only $3!</P1D18>
-            <P1D18a>Good choice! Glad I could help out! </P1D18a>
-            <P1D9>There we have the football girl who doesn't like to play with the Schege.</P1D9>
-            <P1D18b>No problem. You know where to find me if you change your mind.</P1D18b>
-            <Pl0D7>No, no! You let a Schege join the team? I don't want people to think I'm a stealing kid, stealing on the streets! You kick her out. Or we will leave!</Pl0D7>
-            <Pl0D7a>Great! Ahsante sana! </Pl0D7a>
-            <Pl0D7b>OK. We'll see how it goes. But make sure you quickly find more players with a good reputation </Pl0D7b>
-            <Pl1D8>Hey! What did we say! We told you we don't want to be the only ones training with the Missy, the street kid. Now you have to take a decision. She is out or we are out. </Pl1D8>
-            <Pl1D8a>Thanks for listening.</Pl1D8a>
-            <Pl1D8b>We regret your decision. Good luck with the team. </Pl1D8b>
-            <P2D4>Hi Sister! You are really going through with your plans? If you want, you can count me in! </P2D4>
-            <P2D4bis>Hi Sister! You still don't need me for the team? </P2D4bis>
-            <P2D4a>You can always come back on that decision. By the way, get in touch with Philippe, maybe he can spread an apeal through the local radio. </P2D4a>
-            <P2D4b>I'm looking forward to score my first goal!By the way, get in touch with Philippe, maybe he can spread an apeal through the local radio. </P2D4a>
-            <P5D5>Hi. You're Soki's sister? She told me about your football team. I could help you out with a message to ask girls and women to join. I can give you a good price.</P5D5>
-            <P5D5b>No problem. I understand. You know where you can find me if you change your mind.</P5D5b>
-            <P5D5>Hi. You are ready to do the radio spot for you football team?</P5D5>
-            <P5D5a>Great! You won't regret it! I do it first thing!</P5D5a>
-            <P5D6>Good news. Two girls got in touch with the radio station after hearing your appeal on the radio. I let them know they can join your team?</P5D6>
-		    <P3D10>My dear sista. Football for girls? You as a single mum? Courages. My friend Richard, he is working with a lot of young people, often students, who are into sports. Maybe he can find you some players. </P3D10>
-		    <P6D11>Ah. Now I see. You are Gaston's sister. Girls that could be intersted in joining a football team. I don't know. Maybe Rachel, she likes to sport, she can help you.</P6D11>
-		    <P7D12>A female football team? We sometimes played occasionaly with some friends, students as well. I could give it try. I could bring my friend Chanel as well. If you start soon, we could be interested to join. But make sure there are enough girls to start with. I don't want us to be the only ones to show up. </P7D12>
-		    <P7D12a>Great. See you soon!</P7D12a>
-		    <P7D12b>Ok. If you think it will still take to long, it's better to look for other people then.</P7D12b>
-		    <P7D13>We are not enough to do a proper training. This won't work. Sorry. But me and Chanel won't invest our time in a project dammed to fail.</P7D13>
-		    <P7D13a>Ok. We'll give it one more change.</P7D13a>
-		    <P7D13a>Good luck.</P7D13a>
-		    <P7D14>Again. We're not enough players to be able to start a team.Sorry.We gave it a change. But we'll invest our time in something else. Good luck. </P7D14>
-		    <P4D15>Glad to hear you want to start up a football team. It is thanks to our initiative, of the women football match at the international women day, that you got the idea, no? So you should present it to all women associations, at the gathering tomorrow. </P4D15>
-		    <P4D15a>OK. I see. Well, it's you're choice.</P4D15>
-		    <P4D15b>Perfect! See you then!</P4D15b>
-		    <P4D16>I am happy to announce that we have started a female football team. Jocelyne will coordinate this in name of the womens association. Right? </P4D16>
-		    <P4D16a>Ok. Thank you.</P4D16a>
-		    <P4D16b>Great! We are really looking forward to follow-up the project.</P4D16b>
-		    <P4D21>Good news. One of the women of the association would like to try to play football in your team! She will be there at the next training.</P4D21>
-		    <P8D18>I do believe I could help you with a ball. But I normaly only give this to people of our church. I never saw you pray here. Come to church to day and pray with us. Don't forget to bring a dollar for the offering of course.</P8D18>
-		    <P8D18a>Glad you joined! Use the ball well!</P8D18a>
-		    <P8D18b>It's up to you. You are always welcome to pray with us.</P8D18b>
-		    <P8D18bis>Hi! How are you. You want to come and pray with us?</P8D18bis>
-		    
-		    
-		    
-		    
-		
-		
-    </language>
+  <language>
+    <Name>English</Name>
+    <P1D1>Jambo, my friend! You have some $ugar for me? ;-) </P1D1>
+    <P1D1a>Thank you my friend! God bless you! </P1D1a>
+    <P1D1b>Ah.You can't even miss some francs? Such a shame! </P1D1b>
+    <P1D2>How are you? I heard you are looking for players? My sister, Missy, she often plays with us, her Schege brothers. Can she join your team?</P1D2>
+    <P1D2a>Great! She will be looking forward to the first training! </P1D2a>
+    <P1D2b>Ok. Keep me posted!</P1D2b>
+    <P1D2bis>Missy is still waiting for your answer. Can she join the team?</P1D2bis>
+    <P1D3>Hi my friend!</P1D3>
+    <P1D18>You need a ball to play? I have one for a good price. Only $3!</P1D18>
+    <P1D18a>Good choice! Glad I could help out! </P1D18a>
+    <P1D9>There we have the football girl who doesn't like to play with the Schege.</P1D9>
+    <P1D18b>No problem. You know where to find me if you change your mind.</P1D18b>
+    <Pl0D7>No, no! You let a Schege join the team? I don't want people to think I'm a stealing kid, stealing on the streets! You kick her out. Or we will leave!</Pl0D7>
+    <Pl0D7a>Great! Ahsante sana! </Pl0D7a>
+    <Pl0D7b>OK. We'll see how it goes. But make sure you quickly find more players with a good reputation </Pl0D7b>
+    <Pl1D8>Hey! What did we say! We told you we don't want to be the only ones training with the Missy, the street kid. Now you have to take a decision. She is out or we are out. </Pl1D8>
+    <Pl1D8a>Thanks for listening.</Pl1D8a>
+    <Pl1D8b>We regret your decision. Good luck with the team. </Pl1D8b>
+    <P2D4>Hi Sister! You are really going through with your plans? If you want, you can count me in! </P2D4>
+    <P2D4bis>Hi Sister! You still don't need me for the team? </P2D4bis>
+    <P2D4a>You can always come back on that decision. By the way, get in touch with Philippe, maybe he can spread an apeal through the local radio. </P2D4a>
+    <P2D4b>I'm looking forward to score my first goal!By the way, get in touch with Philippe, maybe he can spread an apeal through the local radio. </P2D4b>
+    <P5D5>Hi. You're Soki's sister? She told me about your football team. I could help you out with a message to ask girls and women to join. I can give you a good price.</P5D5>
+    <P5D5b>No problem. I understand. You know where you can find me if you change your mind.</P5D5b>
+    <P5D5bis>Hi. You are ready to do the radio spot for you football team?</P5D5bis>
+    <P5D5a>Great! You won't regret it! I do it first thing!</P5D5a>
+    <P5D6>Good news. Two girls got in touch with the radio station after hearing your appeal on the radio. I let them know they can join your team?</P5D6>
+    <P3D10>My dear sista. Football for girls? You as a single mum? Courages. My friend Richard, he is working with a lot of young people, often students, who are into sports. Maybe he can find you some players. </P3D10>
+    <P6D11>Ah. Now I see. You are Gaston's sister. Girls that could be intersted in joining a football team. I don't know. Maybe Rachel, she likes to sport, she can help you.</P6D11>
+    <P7D12>A female football team? We sometimes played occasionaly with some friends, students as well. I could give it try. I could bring my friend Chanel as well. If you start soon, we could be interested to join. But make sure there are enough girls to start with. I don't want us to be the only ones to show up. </P7D12>
+    <P7D12a>Great. See you soon!</P7D12a>
+    <P7D12b>Ok. If you think it will still take to long, it's better to look for other people then.</P7D12b>
+    <P7D13>We are not enough to do a proper training. This won't work. Sorry. But me and Chanel won't invest our time in a project dammed to fail.</P7D13>
+    <P7D13a>Ok. We'll give it one more change.</P7D13a>
+    <P7D13b>Good luck.</P7D13b>
+    <P7D14>Again. We're not enough players to be able to start a team.Sorry.We gave it a change. But we'll invest our time in something else. Good luck. </P7D14>
+    <P4D15>Glad to hear you want to start up a football team. It is thanks to our initiative, of the women football match at the international women day, that you got the idea, no? So you should present it to all women associations, at the gathering tomorrow. </P4D15>
+    <P4D15a>OK. I see. Well, it's you're choice.</P4D15a>
+    <P4D15b>Perfect! See you then!</P4D15b>
+    <P4D16>I am happy to announce that we have started a female football team. Jocelyne will coordinate this in name of the womens association. Right? </P4D16>
+    <P4D16a>Ok. Thank you.</P4D16a>
+    <P4D16b>Great! We are really looking forward to follow-up the project.</P4D16b>
+    <P4D21>Good news. One of the women of the association would like to try to play football in your team! She will be there at the next training.</P4D21>
+    <P8D18>I do believe I could help you with a ball. But I normaly only give this to people of our church. I never saw you pray here. Come to church to day and pray with us. Don't forget to bring a dollar for the offering of course.</P8D18>
+    <P8D18a>Glad you joined! Use the ball well!</P8D18a>
+    <P8D18b>It's up to you. You are always welcome to pray with us.</P8D18b>
+    <P8D18bis>Hi! How are you. You want to come and pray with us?</P8D18bis>
+
+
+
+    <yes>Yes</yes>
+    <no>No</no>
+    <maybe>Maybe</maybe>
+    <ok>ok</ok>
+
+    <numberPlayers>Players</numberPlayers>
+    <teamLevel>Team's level</teamLevel>
+    <socialSupport>Social support</socialSupport>
+    <teamMood>Team's mood</teamMood>
+
+
+
+  </language>
 </dialogues>

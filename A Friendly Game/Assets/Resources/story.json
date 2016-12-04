@@ -745,8 +745,8 @@
             }
           ],
           "money": -1,
-          "teamatmosphere": +,
-          "socialappreciation": +1,
+          "teamatmosphere": 0,
+          "socialappreciation": 1,
           "appreciation": 0,
           "playeradd": [ ],
           "playerlose": [ ]
