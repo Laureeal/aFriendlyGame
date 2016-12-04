@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public RectTransform dialogueBox;
     public RectTransform parametersPanel;
+    public PlayersListPanel playersListPanel;
 
     [HideInInspector]
     public Dictionary<string, Sentence> sentences;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     public Button optionAButton;
     public Button optionBButton;
 
+    public Text moneyText;
     public Text[] numberPlayerText;
     public Text[] teamLevelText;
     public Text[] socialSupportText;
@@ -35,13 +37,15 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public XmlReader xmlReader;
 
-    public List<Player> players;
+    public Dictionary<string, Player> players;
 
     public string jsonName;
 
+    public int money = 100;
+
     public int level = 1;
-    public int socialSupport = 0;
-    public int teamMood = 0;
+    public int socialSupport = 5;
+    public int teamMood = 50;
 
     public int today = 1;
     public int hour = 6;
@@ -66,6 +70,33 @@ public class GameManager : MonoBehaviour
         xmlReader = GetComponent<XmlReader>();
         optionAButtonText = optionAButton.GetComponentInChildren<Text>();
         optionBButtonText = optionBButton.GetComponentInChildren<Text>();
+
+        money = 100;
+        level = 1;
+        socialSupport = 5;
+        teamMood = 50;
+
+        players = new Dictionary<string, Player>();
+
+        ActualizeTexts();
+    }
+
+    public void AddPlayer (string playerId)
+    {
+        GameObject go = Instantiate(playersListPanel.playerButtonPrefab, playersListPanel.transform) as GameObject;
+        players.Add(playerId, go.GetComponent<Player>());
+        ActualizeTexts();
+    }
+
+    public void RemovePlayer (string playerId)
+    {
+
+        if (!players.ContainsKey(playerId))
+        {
+            return;
+        }
+        Destroy(players[playerId].gameObject);
+        players.Remove(playerId);
         ActualizeTexts();
     }
 
@@ -138,6 +169,7 @@ public class GameManager : MonoBehaviour
 
     public void ActualizeTexts()
     {
+        moneyText.text = money.ToString();
         foreach(Text text in numberPlayerText)
         {
             text.text = players.Count.ToString();
@@ -154,6 +186,7 @@ public class GameManager : MonoBehaviour
         {
             text.text = teamMood.ToString();
         }
+
     }
 
     public void OnCharacterClick(string id)

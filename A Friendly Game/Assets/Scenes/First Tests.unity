@@ -3692,6 +3692,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1881349109}
   optionAButton: {fileID: 889347827}
   optionBButton: {fileID: 1570448999}
+  moneyText: {fileID: 799776839}
   numberPlayerText:
   - {fileID: 1929098314}
   - {fileID: 1684393335}
@@ -3717,7 +3718,8 @@ MonoBehaviour:
   - {fileID: 1084571855}
   - {fileID: 1084571855}
   jsonName: story
-  level: 3
+  money: 100
+  level: 1
   socialSupport: 5
   teamMood: 0
   today: 1

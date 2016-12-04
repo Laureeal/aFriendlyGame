@@ -16,10 +16,10 @@ public class PlayersListPanel : MonoBehaviour
 	
 	void ActualizePlayersList ()
     {
-        foreach(Player player in gameManager.players)
+        foreach(KeyValuePair<string, Player> player in gameManager.players)
         {
             GameObject go = Instantiate(playerButtonPrefab, transform);
-            go.GetComponentInChildren<Text>().text = player.playerName;
+            go.GetComponentInChildren<Text>().text = player.Value.playerName;
         }
     }
 }
