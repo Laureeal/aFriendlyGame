@@ -6,7 +6,8 @@ using System;
 // https://github.com/peperbol
 // https://twitter.com/PepijnWillekens
 
-public static class VectorExtension {
+public static class VectorExtension
+{
 
     //Vector3
 
@@ -25,6 +26,20 @@ public static class VectorExtension {
         return new Vector3(parent.x, parent.y, newZ);
     }
 
+    public static Vector3 ChangeX(this Vector3 parent, FloatEdit edit)
+    {
+        return new Vector3(edit(parent.x), parent.y, parent.z);
+    }
+
+    public static Vector3 ChangeY(this Vector3 parent, FloatEdit edit)
+    {
+        return new Vector3(parent.x, edit(parent.y), parent.z);
+    }
+
+    public static Vector3 ChangeZ(this Vector3 parent, FloatEdit edit)
+    {
+        return new Vector3(parent.x, parent.y, edit(parent.z));
+    }
     //Vector2
 
     public static Vector2 SetX(this Vector2 parent, float newX)

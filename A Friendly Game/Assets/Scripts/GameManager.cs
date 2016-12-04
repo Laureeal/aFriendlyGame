@@ -52,9 +52,7 @@ public class GameManager : MonoBehaviour
 
     public RectTransform hourHandOfClock;
     public Image night;
-
     public float timeToFadeToNight = 1f;
-
 	void Awake ()
     {
         if (singleton)
