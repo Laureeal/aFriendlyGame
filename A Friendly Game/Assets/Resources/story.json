@@ -55,7 +55,7 @@
       "complete": false,
       "appreciation": 1,
       "nextquestion": "D7"
-    }
+    },
     {
       "idperson": "P8",
       "available": true,
@@ -105,7 +105,7 @@
           "appreciation": -1,
           "playeradd": [ ],
           "playerlose": [ ]
-        },
+        }
       ]
     },
     {
@@ -727,7 +727,7 @@
         }
         
       ]
-    }
+    },
     {
       "idsentence": "D19",
       "idchoice": 2,
@@ -768,7 +768,7 @@
           "appreciation": 0,
           "playeradd": [ ],
           "playerlose": [ ]
-        },
+        }
       ]
     }
   ]

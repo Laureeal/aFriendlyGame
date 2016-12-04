@@ -23,6 +23,7 @@ public class PlayersListPanel : MonoBehaviour
         foreach(KeyValuePair<string, Player> player in gameManager.players)
         {
             GameObject go = Instantiate(playerButtonPrefab, transform);
+            go.transform.localScale = Vector3.one;
             go.GetComponentInChildren<Text>().text = player.Value.playerName;
         }
     }
