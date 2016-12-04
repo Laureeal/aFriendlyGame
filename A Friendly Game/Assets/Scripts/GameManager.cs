@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     RectTransform currentPanel = null;
 
+    public Scrollbar dialogueScrollBar;
+
     public PlayersListPanel playersListPanel;
 
     [HideInInspector]
@@ -52,6 +54,10 @@ public class GameManager : MonoBehaviour
     public int socialSupport = 5;
     public int teamMood = 50;
 
+    [HideInInspector]
+    public Dictionary<int, Button> days;
+
+    public int month = 1;
     public int today = 1;
     public int hour = 6;
 
@@ -91,6 +97,14 @@ public class GameManager : MonoBehaviour
         AddPlayer("Pl0");
 
         ActualizeTexts();
+
+        days = new Dictionary<int, Button>();
+        foreach (Button button in calendarPanel.GetComponentsInChildren<Button>())
+        {
+            int day = 1;
+            int.TryParse(button.GetComponentInChildren<Text>().text, out day);
+            days.Add(day, button);
+        }
     }
 
     void SetPlayersNames ()
@@ -109,7 +123,6 @@ public class GameManager : MonoBehaviour
 
     public void AddPlayer (string playerId)
     {
-        Debug.Log("adding player");
         GameObject.Instantiate(playersListPanel.playerButtonPrefab, playersListPanel.transform);
         Player newPlayer = new Player(nameOfPlayers[playerId]);
         players.Add(playerId, newPlayer);
@@ -124,7 +137,6 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        //Destroy(players[playerId].gameObject);
         players.Remove(playerId);
         ActualizeTexts();
         playersListPanel.ActualizePlayersList();
@@ -160,6 +172,8 @@ public class GameManager : MonoBehaviour
 
     void StartDialogue()
     {
+        if (dialogueScrollBar != null)
+            dialogueScrollBar.value = 1f;
         dialogueBox.gameObject.SetActive(true);
     }
 
@@ -267,6 +281,13 @@ public class GameManager : MonoBehaviour
 
     public void GoTomorrow ()
     {
+        DisableDayButton(today);
+        if (today >= 28)
+        {
+            today = 0;
+            NewMonth();
+            month++;
+        }
         today++;
         hour = 6;
 //        night.gameObject.SetActive(true);
@@ -299,5 +320,18 @@ public class GameManager : MonoBehaviour
                 break;
         }
         hourHandOfClock.localEulerAngles = new Vector3(0f, 0f, zRotation);
+    }
+
+    public void NewMonth()
+    {
+        foreach (KeyValuePair<int, Button> day in days)
+        {
+            day.Value.interactable = true;
+        }
+    }
+
+    public void DisableDayButton(int day)
+    {
+        days[day].interactable = false;
     }
 }
