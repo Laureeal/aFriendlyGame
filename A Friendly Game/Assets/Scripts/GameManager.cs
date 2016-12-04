@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
 
     public RectTransform dialogueBox;
     public RectTransform parametersPanel;
+    public RectTransform calendarPanel;
+    public RectTransform toolsPanel;
+
+    RectTransform currentPanel = null;
+
     public PlayersListPanel playersListPanel;
 
     [HideInInspector]
@@ -51,8 +56,9 @@ public class GameManager : MonoBehaviour
     public int hour = 6;
 
     public RectTransform hourHandOfClock;
-    public Image night;
-    public float timeToFadeToNight = 1f;
+
+    /*    public Image night;
+        public float timeToFadeToNight = 1f;*/
 
     public Dictionary<string, string> nameOfPlayers;
 
@@ -104,7 +110,7 @@ public class GameManager : MonoBehaviour
     public void AddPlayer (string playerId)
     {
         Debug.Log("adding player");
-        GameObject go = Instantiate(playersListPanel.playerButtonPrefab, playersListPanel.transform) as GameObject;
+        GameObject.Instantiate(playersListPanel.playerButtonPrefab, playersListPanel.transform);
         Player newPlayer = new Player(nameOfPlayers[playerId]);
         players.Add(playerId, newPlayer);
         ActualizeTexts();
@@ -186,9 +192,35 @@ public class GameManager : MonoBehaviour
         dialogueBox.gameObject.SetActive(false);
     }
 
+    public void ChangePanel (RectTransform panel)
+    {
+        if (panel == null || panel == currentPanel)
+        {
+            currentPanel.gameObject.SetActive(false);
+            currentPanel = null;
+            return;
+        }
+        if (currentPanel != null)
+        {
+            currentPanel.gameObject.SetActive(false);
+        }
+        currentPanel = panel;
+        currentPanel.gameObject.SetActive(true);
+    }
+
     public void OnParametersButtonClick()
     {
-        parametersPanel.gameObject.SetActive(!parametersPanel.gameObject.activeInHierarchy);
+        ChangePanel(parametersPanel);
+    }
+
+    public void OnCalendarButtonClick()
+    {
+        ChangePanel(calendarPanel);
+    }
+
+    public void OnToolsButtonClick()
+    {
+        ChangePanel(toolsPanel);
     }
 
     public void ActualizeTexts()
@@ -267,5 +299,5 @@ public class GameManager : MonoBehaviour
                 break;
         }
         hourHandOfClock.localEulerAngles = new Vector3(0f, 0f, zRotation);
-    } 
+    }
 }

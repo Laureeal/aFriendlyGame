@@ -35,9 +35,9 @@ public class Answer
 
     protected void ApplyStats()
     {
-        //money
+        GameManager.singleton.money += 10 * money;
         GameManager.singleton.socialSupport += socialAppreciation;
-        GameManager.singleton.teamMood += teamAtmosphere;
+        GameManager.singleton.teamMood += 5 * teamAtmosphere;
         GameManager.singleton.currentCharacter.appreciation += appreciation;
         GameManager.singleton.ActualizeTexts();
     }
@@ -47,10 +47,8 @@ public class Answer
         {
 
             ApplyStats();
-            //GameManager.singleton.AddPlayer()
-            //todo:add player
-            //todo:remove player
-            foreach(string playerId in addPlayerIds)
+
+            foreach (string playerId in addPlayerIds)
             {
                 GameManager.singleton.AddPlayer(playerId);
             }
