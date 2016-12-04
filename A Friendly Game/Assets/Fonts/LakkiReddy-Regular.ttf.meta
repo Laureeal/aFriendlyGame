@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1291a21beeb922141b87827270065201
+timeCreated: 1480818796
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lakki Reddy
+  fontNames:
+  - Lakki Reddy
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
