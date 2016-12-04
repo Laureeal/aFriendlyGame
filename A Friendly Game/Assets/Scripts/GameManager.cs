@@ -43,7 +43,15 @@ public class GameManager : MonoBehaviour
     public int socialSupport = 0;
     public int teamMood = 0;
 
-	void Start ()
+    public int today = 1;
+    public int hour = 6;
+
+    public RectTransform hourHandOfClock;
+    public Image night;
+
+    public float timeToFadeToNight = 1f;
+
+	void Awake ()
     {
         if (singleton)
         {
@@ -60,6 +68,7 @@ public class GameManager : MonoBehaviour
         optionBButtonText = optionBButton.GetComponentInChildren<Text>();
         ActualizeTexts();
     }
+
     private void LoadJSON()
     {
         JSONObject obj = new JSONObject(Resources.Load<TextAsset>(jsonName).text);
@@ -153,4 +162,53 @@ public class GameManager : MonoBehaviour
         characters.TryGetValue(id, out c);
         c.LaunchDialogue();
     }
+
+    public void HourChanged ()
+    {
+        if (hour < 18)
+        {
+            hour += 3;
+        }
+        if (hour >= 18)
+        {
+            GoTomorrow();
+        }
+        SetHourOnClock();
+    }
+
+    public void GoTomorrow ()
+    {
+        today++;
+        hour = 6;
+//        night.gameObject.SetActive(true);
+//        night.canvasRenderer.SetAlpha(0.1f);
+//        night.CrossFadeAlpha(1f, timeToFadeToNight, true);
+//        night.CrossFadeAlpha(0.1f, timeToFadeToNight, true);
+//        night.gameObject.SetActive(false);
+
+        //StartCoroutine(GoodNight());
+    }
+
+    void SetHourOnClock ()
+    {
+        float zRotation = 0f;
+        switch (hour)
+        {
+            default:
+            case 6:
+            case 18:
+                zRotation = 180f;          
+                break;
+            case 9:
+                zRotation = 90f;           
+                break;
+            case 12:
+                zRotation = 0f;
+                break;
+            case 15:
+                zRotation = -90f;
+                break;
+        }
+        hourHandOfClock.localEulerAngles = new Vector3(0f, 0f, zRotation);
+    } 
 }
